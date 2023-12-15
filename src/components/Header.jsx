@@ -14,8 +14,9 @@ export const Header = () => {
             <div className="navbar">
                 <div className="brand"><a href="#welcome">Landon <span>Hotel</span></a></div>
                 <ul>
-               { 
-               <li><a className="icon info" href="#hotelinfo"><span>info</span></a></li>
+               { menuLinkData.map((link) => (
+                    <li><a className={`icon ${link.class}`} href={link.href}><span>{link.text}</span></a></li>
+                 ))
                 }
                 </ul>
             </div>
