@@ -1,15 +1,26 @@
 import React, {useState, useEffect} from 'react';
-// import galleryImageData from "./data/gallery_images.json"
+// import galleryImagesData from "./data/gallery_images.json"
 
 export const Welcome = () => {
-  const [galeryImagesData, setgaleryImagesData] = useState([]);
+  const [galleryImagesData, setgaleryImagesData] = useState([]);
+
+  const loadGaleryImagesData = async() => {
+    const resp = await fetch('https://ivr5v6jf93.execute-api.us-east-1.amazonaws.com/Production/gallery_images');
+    let jsonData = await resp.json();
+
+    setgaleryImagesData(jsonData);
+  }
+
+  useEffect(()=>{
+    loadGaleryImagesData();
+  },[]);
 
     return (
         <div className="scene" id="welcome">
           <article className="content">
             <div className="gallery">
               {
-                  galleryImageData.map((image) => 
+                  galleryImagesData.map((image) => 
                     <img className={image.className} src={image.src} alt={image.alt} />
                     )
               }
