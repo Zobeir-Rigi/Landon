@@ -4,8 +4,13 @@ import React, {useState, useEffect} from 'react';
 export const Header = () => {
     const [menuLinkData,setMenuLinkData] = useState([]);
 
+    const LoadMenuLinkData = async() => {
+        const resp = await fetch ('https://ivr5v6jf93.execute-api.us-east-1.amazonaws.com/Production/menu_links');
+        let jsonData = await resp.json();
+    }
+
     useEffect(()=>{
-        
+
     },[])
 
     return (
