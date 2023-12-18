@@ -1,6 +1,9 @@
-import React from 'react';
-import menuLinkData from "./data/menu_links.json"
+import React, {useState, useEffect} from 'react';
+// import menuLinkData from "./data/menu_links.json"
+
 export const Header = () => {
+    const [menuLinkData,setMenuLinkData] = useState([])
+
     return (
         <header id="intro">
             <article className="fullheight">
