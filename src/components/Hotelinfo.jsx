@@ -3,11 +3,21 @@ import React, {useState, useEffect} from 'react';
 // import accessibilityData from './data/accessibilities.json'
 
 export const Hotelinfo = () =>{
-  const [accessibilitiyData,setaccessibilitiyData] = useState([]);
+  const [accessibilityData,setaccessibilitiyData] = useState([]);
   const [servicesData,setservicesData] = useState([]);
-
-
   
+  const loadaccessibilityData = async () => {
+    const resp = await fetch ('');
+    let jsonData = resp.json();
+
+    setaccessibilitiyData(jsonData)
+  }
+
+  useEffect(()=>{
+
+  },[]);
+
+
   return (
    <div className="scene" id="hotelinfo">
       <article className="heading">
