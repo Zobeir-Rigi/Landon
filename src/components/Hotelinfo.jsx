@@ -1,7 +1,13 @@
-import servicesData from './data/services.json'
-import accessibilityData from './data/accessibilities.json'
+import React, {useState, useEffect} from 'react';
+// import servicesData from './data/services.json'
+// import accessibilityData from './data/accessibilities.json'
 
 export const Hotelinfo = () =>{
+  const [accessibilitiyData,setaccessibilitiyData] = useState([]);
+  const [servicesData,setservicesData] = useState([]);
+
+
+  
   return (
    <div className="scene" id="hotelinfo">
       <article className="heading">
