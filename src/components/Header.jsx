@@ -2,7 +2,11 @@ import React, {useState, useEffect} from 'react';
 // import menuLinkData from "./data/menu_links.json"
 
 export const Header = () => {
-    const [menuLinkData,setMenuLinkData] = useState([])
+    const [menuLinkData,setMenuLinkData] = useState([]);
+
+    useEffect(()=>{
+        
+    },[])
 
     return (
         <header id="intro">
