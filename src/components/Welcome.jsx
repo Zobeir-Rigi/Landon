@@ -1,5 +1,9 @@
-import galleryImageData from "./data/gallery_images.json"
+import React, {useState, useEffect} from 'react';
+// import galleryImageData from "./data/gallery_images.json"
+
 export const Welcome = () => {
+  const [galeryImagesData, setgaleryImagesData] = useState([]);
+
     return (
         <div className="scene" id="welcome">
           <article className="content">
