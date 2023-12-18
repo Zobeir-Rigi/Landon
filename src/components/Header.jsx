@@ -7,10 +7,12 @@ export const Header = () => {
     const LoadMenuLinkData = async() => {
         const resp = await fetch ('https://ivr5v6jf93.execute-api.us-east-1.amazonaws.com/Production/menu_links');
         let jsonData = await resp.json();
+
+        setMenuLinkData(jsonData)
     }
 
     useEffect(()=>{
-
+        LoadMenuLinkData();
     },[])
 
     return (
