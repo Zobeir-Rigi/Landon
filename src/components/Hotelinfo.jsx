@@ -13,8 +13,16 @@ export const Hotelinfo = () =>{
     setaccessibilitiyData(jsonData)
   }
 
+  const loadservicesData = async () => {
+    const resp = await fetch ('https://ivr5v6jf93.execute-api.us-east-1.amazonaws.com/Production/services');
+    let jsonData = await resp.json();
+
+    setservicesData(jsonData)
+  }
+
   useEffect(()=>{
     loadaccessibilityData();
+    loadservicesData();
   },[]);
 
 
