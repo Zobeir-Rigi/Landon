@@ -29,7 +29,7 @@ export const Header = () => {
                 <div className="brand"><a href="#welcome">Landon <span>Hotel</span></a></div>
                 <ul>
                { menuLinkData.map((link) => (
-                    <li><a className={`icon ${link.class}`} href={link.href}><span>{link.text}</span></a></li>
+                    <li key={link.href}><a className={`icon ${link.class}`} href={link.href}><span>{link.text}</span></a></li>
                  ))
                 }
                 </ul>
