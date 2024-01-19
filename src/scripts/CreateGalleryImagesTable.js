@@ -9,9 +9,7 @@ var dynamodb = new AWS.DynamoDB();
 var params = {
   TableName: "GalleryImages",
   KeySchema: [
-    // Partition Key
     { AttributeName: "src", KeyType: "HASH" },
-    // Sort Keys
     { AttributeName: "className", KeyType: "RANGE"}  
   ],
   AttributeDefinitions: [
