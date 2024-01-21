@@ -9,7 +9,6 @@ var dynamodb = new AWS.DynamoDB();
 var params = {
   TableName: "Accessibilities",
   KeySchema: [
-    // Partition Key
     { AttributeName: "name", KeyType: "HASH" }
   ],
   AttributeDefinitions: [
