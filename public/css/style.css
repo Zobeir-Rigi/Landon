@@ -156,6 +156,7 @@ header .fullheight {
   align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
+  height: 100vh;
 }
 /* line 9, ../../../components/sass/modules/_intro.scss */
 header .fullheight .hgroup {
