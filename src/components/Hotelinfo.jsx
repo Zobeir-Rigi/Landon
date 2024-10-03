@@ -7,14 +7,14 @@ export const Hotelinfo = () =>{
   const [servicesData,setservicesData] = useState([]);
   
   const loadaccessibilityData = async () => {
-    const resp = await fetch ('https://ivr5v6jf93.execute-api.us-east-1.amazonaws.com/Production/accessibilities');
+    const resp = await fetch ('https://ejlgxm9wq5.execute-api.us-east-1.amazonaws.com/Production/accessibilities');
     let jsonData = await resp.json();
 
     setaccessibilitiyData(jsonData)
   }
 
   const loadservicesData = async () => {
-    const resp = await fetch ('https://ivr5v6jf93.execute-api.us-east-1.amazonaws.com/Production/services');
+    const resp = await fetch ('https://ejlgxm9wq5.execute-api.us-east-1.amazonaws.com/Production/services');
     let jsonData = await resp.json();
 
     setservicesData(jsonData)

@@ -5,7 +5,7 @@ export const Welcome = () => {
   const [galleryImagesData, setgaleryImagesData] = useState([]);
 
   const loadGaleryImagesData = async() => {
-    const resp = await fetch('https://ivr5v6jf93.execute-api.us-east-1.amazonaws.com/Production/gallery_images');
+    const resp = await fetch('https://ejlgxm9wq5.execute-api.us-east-1.amazonaws.com/Production/galleryImages');
     let jsonData = await resp.json();
 
     setgaleryImagesData(jsonData);
